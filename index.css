@@ -15,3 +15,15 @@ body{
     background-color: hsl(180, 15%, 90%);
 
 }
+.navbar{
+    background-color: antiquewhite;
+    width: 85%;
+    height: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row nowrap;
+    padding: 5%;
+}
