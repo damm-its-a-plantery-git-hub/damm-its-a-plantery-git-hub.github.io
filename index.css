@@ -18,12 +18,12 @@ body{
 .navbar{
     background-color: antiquewhite;
     width: 85%;
-    height: 25%;
+    /*height: 15%;*/
     margin-left: auto;
     margin-right: auto;
     color: black;
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
-    padding: 5%;
+    padding: 1%;
 }
