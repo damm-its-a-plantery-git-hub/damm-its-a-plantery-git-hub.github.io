@@ -15,15 +15,25 @@ body{
     background-color: hsl(180, 15%, 90%);
 
 }
-.navbar{
+#navbar{
     background-color: antiquewhite;
-    width: 85%;
+    width:auto;
     /*height: 15%;*/
-    margin-left: auto;
+    /*border-left-width: 1%;
+    border-right-width: 1%;*/
+    padding-right: 1%;
+    padding-left: 1%;
+    position: fixed;
+    /*margin-left: auto;
     margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;*/
     color: black;
     display: flex;
+    
     justify-content: space-between;
+
     flex-flow: row nowrap;
-    padding: 1%;
+    align-items: center;
+    /*top: -1000px;*/
 }

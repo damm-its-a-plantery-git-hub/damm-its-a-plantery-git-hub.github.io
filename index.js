@@ -1,43 +1,23 @@
+//const nav = document.querySelector(".navbar");
+const nav = document.getElementById("navbar");
+let lastScrollY = window.scrollY;
 
-
-function copyElementToStorage() {
-  // 1. Get the element you want to copy
-  const elementToCopy = document.getElementById("navbar");
-  
-  if (elementToCopy) {
-    // 2. Get the HTML content as a string
-    const htmlString = elementToCopy.innerHTML;
-    
-    // 3. Store the string in sessionStorage
-    // The key is 'copiedElementHTML', and the value is the HTML string
-    sessionStorage.setItem("copiedElementHTML", htmlString);
-    
-    console.log("Element HTML copied to sessionStorage!");
+window.addEventListener("scroll", () => {
+  console.log("checking")
+  if (lastScrollY < window.scrollY) {
+    // Scrolling Down - hide the nav
+    nav.style.top = "-1000px";
+    //classList.add("navbar--hidden");
+    console.log("adding class")
+    console.log(nav.style.top)
   } else {
-    console.error("Element not found!");
+    // Scrolling Up - show the nav
+    nav.style.top = "0px";
+    console.log("removing class")
+    console.log(nav.style.top)
   }
-}
-function pasteElementFromStorage() {
-  // 1. Retrieve the HTML string from sessionStorage
-  const htmlString = sessionStorage.getItem("copiedElementHTML");
-  
-  // 2. Select the target element to insert the content
-  const targetElement = document.getElementById("navbar");
-  
-  if (htmlString && targetElement) {
-    // 3. Inject the HTML string into the target element
-    targetElement.innerHTML = htmlString;
-    
-    console.log("Element HTML pasted from sessionStorage!");
-    
-    // Optional: Remove the item from storage after use
-    sessionStorage.removeItem("copiedElementHTML");
-  } else if (!htmlString) {
-    console.error("No element HTML found in sessionStorage.");
-  } else {
-    console.error("Target element not found!");
-  }
-}
 
-// Call the function when the page loads
-window.onload = pasteElementFromStorage;
+  // Update the position for the next scroll event
+  lastScrollY = window.scrollY;
+});
+
