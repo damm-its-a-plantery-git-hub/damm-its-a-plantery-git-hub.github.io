@@ -23,7 +23,7 @@ body{
     border-right-width: 1%;*/
     padding-right: 1%;
     padding-left: 1%;
-    position: sticky;
+    position: fixed;
     visibility: visible;
     /*margin-left: auto;
     margin-right: auto;
