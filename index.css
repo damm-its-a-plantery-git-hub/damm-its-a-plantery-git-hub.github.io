@@ -16,8 +16,8 @@ body{
 
 }
 #navbar{
-    background-color: antiquewhite;
-    width:auto;
+    background-color: #faebd7;
+    width: 97%;
     /*height: 15%;*/
     /*border-left-width: 1%;
     border-right-width: 1%;*/
@@ -31,21 +31,29 @@ body{
     margin-bottom: auto;*/
     color: black;
     display: flex;
-    
     justify-content: space-between;
-
     flex-flow: row nowrap;
     align-items: center;
+    top: 10px;
+    transition: transform 1s ease-in-out
 }
+
 #navbar a{
     display: block;
     color: blue;
     text-align: center;
-    padding: auto;
+    padding: 1% 1%;
     text-decoration: none;
 }
+
 #navbar a:hover {
-    background-color: #111111;
+    background-color: #f5d7af;
+}
+
+#navbar #logo{
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    color: rgb(99, 109, 99);
+    background-color: #faebd7;
 }
 /*
 ul {
