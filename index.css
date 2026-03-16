@@ -18,7 +18,7 @@ body{
 #navbar{
     background-color: #faebd7;
     width: 97%;
-    /*height: 15%;*/
+    height: auto;
     /*border-left-width: 1%;
     border-right-width: 1%;*/
     padding-right: 1%;
@@ -35,7 +35,13 @@ body{
     flex-flow: row nowrap;
     align-items: center;
     top: 10px;
-    transition: transform 1s ease-in-out
+    bottom: auto;
+    transition: transform 0.3s ease;
+    transform: translateY(0);
+    
+}
+#navbar.navbar--hidden{
+    transform: translateY(-100%);
 }
 
 #navbar a{
@@ -55,27 +61,4 @@ body{
     color: rgb(99, 109, 99);
     background-color: #faebd7;
 }
-/*
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #333333;
-}
 
-ul li {
-  float: left;
-}
-
-ul li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul li a:hover {
-  background-color: #111111;
-}*/

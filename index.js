@@ -5,12 +5,12 @@ window.addEventListener("scroll", () => {
   console.log("checking")
   if (lastScrollY < window.scrollY) {
     // Scrolling Down - hide the navbar
-    //nav.style.visibility = "hidden";
-    nav.style.top = "-200px";
+    //nav.style.top = "-200px";
+    nav.classList.add('navbar--hidden');
   } else {
     // Scrolling Up - show the nav
-    //nav.style.visibility = "visible";
-    nav.style.top = "10px";
+    //nav.style.top = "10px";
+    nav.classList.remove('navbar--hidden')
   }
 
   // Update the position for the next scroll event
