@@ -23,7 +23,7 @@ body{
     border-right-width: 1%;*/
     padding-right: 1%;
     padding-left: 1%;
-    position: fixed;
+    position: sticky;
     visibility: visible;
     /*margin-left: auto;
     margin-right: auto;
@@ -54,8 +54,7 @@ body{
     font-weight: 300;
     font-size: larger;
     height: 100px;
-    
-       
+    align-content: center;
 }
 
 #navbar a:hover {
