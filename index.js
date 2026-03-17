@@ -2,7 +2,7 @@ const nav = document.getElementById("navbar");
 let lastScrollY = window.scrollY;
 
 window.addEventListener("scroll", () => {
-  console.log("checking")
+  console.log("checking",lastScrollY,window,scrollY)
   if (lastScrollY < window.scrollY) {
     // Scrolling Down - hide the navbar
     //nav.style.top = "-200px";
