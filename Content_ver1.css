@@ -1,0 +1,27 @@
+.ContentVER1{
+    display: grid;
+    grid-template-columns: auto auto;
+    background-color: aqua;
+    padding: 0.5%;
+}
+.ContentVER1 img{
+    content: blank;
+    background-color: aliceblue;
+    border: 1px black;
+    padding: 5px;
+    text-align: center;
+}
+.ContentVER1 h1{
+    content: blank;
+    background-color: aliceblue;
+    border: 1px black;
+    padding: 5px;
+    text-align: center;
+}
+.ContentVER1 p{
+    content: blank;
+    background-color: aliceblue;
+    border: 1px black;
+    padding: 5px;
+    text-align: center;
+}
