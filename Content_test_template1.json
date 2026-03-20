@@ -1,0 +1,13 @@
+{
+    "Heading":"This is a great heading",
+    "Picture":"Render.png",
+    "Discriptor":"i want you to open this",
+    "HtmlFile":"content_ver1.html",
+    "Content":{
+        "Page_Heading":"This article is cool",
+        "Text_Block_1":"This article is about articles,<br> here is a <em>new line</em>",
+        "image_1":"Render.png",
+        "Image_1_text":"This image is very cool"
+
+    }
+}
