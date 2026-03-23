@@ -1,4 +1,3 @@
-const nav = document.getElementById("navbar");
 let lastScrollY = window.scrollY;
 
 async function set_navbar() {
@@ -15,7 +14,7 @@ async function set_navbar() {
     }
   const result = await response.json();
   console.log(result);
-  nav.innerHTML = result.content
+  document.getElementById("navbar").innerHTML = result.content
   } catch (error) {
     console.error(error.message);
   }
@@ -23,6 +22,7 @@ async function set_navbar() {
 
 
 window.addEventListener("scroll", () => {
+  let nav = document.getElementById("navbar")
   if (lastScrollY < window.scrollY ) {
     // Scrolling Down - hide the navbar
     nav.classList.add('navbar--hidden');
