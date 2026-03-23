@@ -15,12 +15,12 @@ body{
     background-color: hsl(180, 15%, 90%);
 
 }
-#navbar{
+/*#navbar{
     background-color: #faebd7;
     width: 97%;
     height: auto;
-    /*border-left-width: 1%;
-    border-right-width: 1%;*/
+    border-left-width: 1%;
+    border-right-width: 1%;
     padding-right: 1%;
     padding-left: 1%;
     position: sticky;
@@ -28,7 +28,7 @@ body{
     /*margin-left: auto;
     margin-right: auto;
     margin-top: auto;
-    margin-bottom: auto;*/
+    margin-bottom: auto;
     color: black;
     display: flex;
     justify-content: space-between;
@@ -67,5 +67,5 @@ body{
     font-size: large;
     color: rgb(99, 109, 99);
     background-color: #faebd7;
-}
+}*/
 
