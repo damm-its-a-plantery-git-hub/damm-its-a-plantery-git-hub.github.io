@@ -1,12 +1,13 @@
 let lastScrollY = window.scrollY;
 
-async function set_navbar() {
+async function SetUpPage() {
   //let navbar = fetch("navbar.html").then(Response.text(nav.innerHTML = navbar))
   //fetch("navbar.html")
    // .then(Response => Response.text()).then(myconvertedtext => console.log(myconvertedtext))
   
   //console.log("Putting html in",fetch("navbar.html"), "vs the actal code", nav.innerHTML)
   const url = "navbar.json"
+  const footer ="footer.json"
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -15,6 +16,17 @@ async function set_navbar() {
   const result = await response.json();
   console.log(result);
   document.getElementById("navbar").innerHTML = result.content
+  } catch (error) {
+    console.error(error.message);
+  }
+  try {
+    const response = await fetch(footer);
+    if (!response.ok) {
+      throw new Error(`Response status: ${response.status}`);
+    }
+  const result = await response.json();
+  console.log(result);
+  document.getElementById("footer").innerHTML = result.content
   } catch (error) {
     console.error(error.message);
   }
