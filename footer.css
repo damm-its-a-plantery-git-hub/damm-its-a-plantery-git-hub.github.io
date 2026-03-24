@@ -6,10 +6,11 @@
     display: grid;
     padding-left: 1%;
     padding-right: 1%;
-    align-content: center
-    ;
+    align-content: center;
 }
 #footer #Links{
+    display: flex;
+    gap: 2%;
     height: 10%;
     text-align: center;
     align-content: center;
