@@ -1,15 +1,15 @@
 #footer{
     background-color: beige;
     width: 97%;
-    grid-template-columns: 1fr 1fr 3fr 1fr 1fr;
-    justify-content: space-between;
+    grid-template-columns: 1fr 3fr 1fr;
+    justify-content:space-between;
     display: grid;
     padding-left: 1%;
     padding-right: 1%;
     align-content: center
     ;
 }
-#footer a{
+#footer #Links{
     height: 10%;
     text-align: center;
     align-content: center;
@@ -17,7 +17,17 @@
     font-family: "Google Sans", 'Times New Roman', Times, serif;;
     font-weight: 300;
     font-size: larger;
-    padding:  1% 2%;
-
-    
+    margin-left: 3%;
+    padding-top: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+#footer #LinkSide{
+    height: 10%;
+    text-align: end;
+    text-decoration: none;
+    font-family: "Google Sans", 'Times New Roman', Times, serif;;
+    font-weight: 300;
+    font-size: larger;
+    padding:  3% 2%;
 }
