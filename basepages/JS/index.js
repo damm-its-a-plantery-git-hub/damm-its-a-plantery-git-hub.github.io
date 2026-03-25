@@ -6,16 +6,16 @@ async function SetUpPage() {
    // .then(Response => Response.text()).then(myconvertedtext => console.log(myconvertedtext))
   
   //console.log("Putting html in",fetch("navbar.html"), "vs the actal code", nav.innerHTML)
-  const url = "navbar.json"
-  const footer ="footer.json"
+  const url = "../navbar.md"
+  const footer ="../footer.md"
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
-  const result = await response.json();
+  const result = await response.text();
   console.log(result);
-  document.getElementById("navbar").innerHTML = result.content
+  document.getElementById("navbar").innerHTML = result
   } catch (error) {
     console.error(error.message);
   }
@@ -24,9 +24,9 @@ async function SetUpPage() {
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
-  const result = await response.json();
+  const result = await response.text();
   console.log(result);
-  document.getElementById("footer").innerHTML = result.content
+  document.getElementById("footer").innerHTML = result
   } catch (error) {
     console.error(error.message);
   }
