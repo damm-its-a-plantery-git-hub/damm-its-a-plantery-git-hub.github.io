@@ -35,14 +35,16 @@ async function SetUpPage() {
 
 async function setup_page() {
   const url = "/pages/" + window.location.href.split("?p=")[1] + ".md";
+  console.log(window.location.href.split("?p=")[1] + ".md")
   try {
-    const response = await fetch(footer);
+    const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
   const result = await response.text();
   console.log(result);
   document.getElementById("pagecontent").innerHTML = result
+  console.log(url)
   } catch (error) {
     console.error(error.message);
     document.getElementById("pagecontent").innerHTML = "<p>Cannot find page ", url, "</p>"
