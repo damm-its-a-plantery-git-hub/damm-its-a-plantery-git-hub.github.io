@@ -1,13 +1,8 @@
 let lastScrollY = window.scrollY;
 
 async function SetUpPage() {
-  //let navbar = fetch("navbar.html").then(Response.text(nav.innerHTML = navbar))
-  //fetch("navbar.html")
-   // .then(Response => Response.text()).then(myconvertedtext => console.log(myconvertedtext))
-  
-  //console.log("Putting html in",fetch("navbar.html"), "vs the actal code", nav.innerHTML)
-  const url = "../navbar.md"
-  const footer ="../footer.md"
+  const url = "basepages/navbar.md"
+  const footer ="basepages/footer.md"
   try {
     const response = await fetch(url);
     if (!response.ok) {
@@ -19,15 +14,16 @@ async function SetUpPage() {
   } catch (error) {
     console.error(error.message);
   }
+  //Uses try so it thorws errors properly 
   try {
-    const response = await fetch(footer);
-    if (!response.ok) {
-      throw new Error(`Response status: ${response.status}`);
+    const response = await fetch(footer); //checks footer to see if it works
+    if (!response.ok) { //checks if it is working or not if / if not working gives error
+      throw new Error(`Response status: ${response.status}`); //give error
     }
-  const result = await response.text();
-  console.log(result);
-  document.getElementById("footer").innerHTML = result
-  } catch (error) {
+  const result = await response.text(); //gets the data from the footer
+  console.log(result); //prints to console 
+  document.getElementById("footer").innerHTML = result //sets the page with thing 
+  } catch (error) { //Tells me the error in the website console
     console.error(error.message);
   }
 }
