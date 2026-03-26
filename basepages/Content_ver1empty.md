@@ -1,5 +1,5 @@
-<link rel = "stylesheet" href = "Content_ver1.css">
-<script src="Content_ver1.js"></script>
+<link rel = "stylesheet" href = "basepages/CSS/Content_ver1.css">
+<script src=""></script>
 <div class="ContentVER1">
 <img id="contentimg" src="before.png" height="25%" class="Content_image">
     <div>

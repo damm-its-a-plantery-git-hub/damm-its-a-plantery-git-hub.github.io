@@ -16,12 +16,23 @@ body{
 
 }
 #PageContent{
-    position: static;
-    padding-left: 1%;
-    padding-right: 1%;
+    position: static; 
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
     padding-top: 1%;
     background-color: aqua;
-
-
-
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.blogs{
+    background-color: blueviolet;
+    padding: 5px;
+    margin: 5px;
+    
+}
+.guides{
+    background-color: coral;
+    padding: 5px;
+    margin: 5px;
 }

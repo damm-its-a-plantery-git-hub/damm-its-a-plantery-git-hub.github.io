@@ -8,8 +8,10 @@
     content: blank;
     background-color: aliceblue;
     border: 1px black;
-    padding: 5px;
+    padding: 4px;
     text-align: center;
+    width: 95%;
+    height: 95%;
 }
 .ContentVER1 h1{
     content: blank;
