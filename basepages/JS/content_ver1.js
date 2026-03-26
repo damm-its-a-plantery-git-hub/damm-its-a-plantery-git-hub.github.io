@@ -1,5 +1,0 @@
-Content = {
-    "Heading":"",
-    "Picture":"",
-    "Discriptor":""
-}
