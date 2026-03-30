@@ -25,13 +25,13 @@ body{
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.blogs{
+#blogs{
     background-color: blueviolet;
     padding: 5px;
     margin: 5px;
     
 }
-.guides{
+#guides{
     background-color: coral;
     padding: 5px;
     margin: 5px;
