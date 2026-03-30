@@ -29,7 +29,7 @@ async function SetUpPage() {
 }
 
 
-async function setup_page() {
+async function setup_page() { //Sets up the content page
   const url = "/pages/" + window.location.href.split("?p=")[1] + ".md";
   console.log(window.location.href.split("?p=")[1] + ".md")
   try {

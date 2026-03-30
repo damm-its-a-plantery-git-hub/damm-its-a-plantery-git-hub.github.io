@@ -6,7 +6,7 @@
             <link rel="preconnect" href="https://fonts.googleapis.com">
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
             <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,GRAD@0,17..18,25;1,17..18,25&display=swap" rel="stylesheet">
-                
+            <script src="contentloader.js"></script>
             <title>My Website</title>
         </head>
     <body onload="SetUpPage()" >
@@ -21,7 +21,8 @@
                 <p>heyyy</p>
             </div> 
             
-            <div class="guides">
+            <div class="guides" onload="load_content('guides')">
+                
                 <p>Heyy bbg</p>
                 <div id="content1">
                     <link rel = "stylesheet" href = "basepages/CSS/Content_ver1.css">
