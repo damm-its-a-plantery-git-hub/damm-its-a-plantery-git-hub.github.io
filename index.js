@@ -9,7 +9,6 @@ async function SetUpPage() {
       throw new Error(`Response status: ${response.status}`);
     }
   const result = await response.text();
-  console.log(result);
   document.getElementById("navbar").innerHTML = result
   } catch (error) {
     console.error(error.message);
@@ -21,7 +20,6 @@ async function SetUpPage() {
       throw new Error(`Response status: ${response.status}`); //give error
     }
   const result = await response.text(); //gets the data from the footer
-  console.log(result); //prints to console 
   document.getElementById("footer").innerHTML = result //sets the page with thing 
   } catch (error) { //Tells me the error in the website console
     console.error(error.message);
