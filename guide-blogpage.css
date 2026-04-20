@@ -1,0 +1,36 @@
+h1 {
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    color: rgb(99, 109, 99);
+}
+
+#googlefont{
+  font-family: "Google Sans", 'Times New Roman', Times, serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+  font-variation-settings:
+    "GRAD" 25;
+}
+body{
+    background-color: hsl(180, 15%, 90%);
+
+}
+#PageContent{
+    position: static; 
+    width: 80%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    background-color: aqua;
+    
+}
+#columns{
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+}
+
+#content{
+    background-color: coral;
+    padding: 5px;
+    margin: 5px;
+}
