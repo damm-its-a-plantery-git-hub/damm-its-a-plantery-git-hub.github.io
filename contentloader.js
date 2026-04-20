@@ -10,7 +10,6 @@ async function find_content(type) { //Sets up the content page
     }
     const result = await response.json();
     let entries = result.length;
-    let minfeat = -1
     Object.values(result).forEach (value => {
         best = value
             if (!value.applyed) {
@@ -19,13 +18,9 @@ async function find_content(type) { //Sets up the content page
             }
     })
     console.log(best)
-
     } catch (error) {
         console.error(error.message)
-    }
-
-
-    
+    }  
 }
 
 async function apply_content(best,type) {

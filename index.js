@@ -1,6 +1,6 @@
 let lastScrollY = window.scrollY;
 
-async function SetUpPage() {
+async function SetUpPage() { //applys the footer and navbar
   const url = "basepages/navbar.md"
   const footer ="basepages/footer.md"
   try {
