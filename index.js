@@ -1,6 +1,14 @@
 let lastScrollY = window.scrollY;
 
-async function SetUpPage() { //applys the footer and navbar
+async function SetUpPage(headlines,type = false) { //applys the footer and navbar
+  if (headlines == true ){
+    find_content("blogs",type)
+    if (type == false){
+      find_content("guides",type)
+    }
+    
+  } 
+
   const url = "basepages/navbar.md"
   const footer ="basepages/footer.md"
   try {
@@ -28,6 +36,7 @@ async function SetUpPage() { //applys the footer and navbar
 
 
 async function setup_page() { //Sets up the content page
+  SetUpPage(false)
   const url = "/pages/" + window.location.href.split("?p=")[1] + ".md";
   console.log(window.location.href.split("?p=")[1] + ".md")
   try {
@@ -62,15 +71,17 @@ window.addEventListener("scroll", () => {
 
 async function find_content(type,onetype) { //Sets up the content page
     const indexurl = "contentindex" + type + ".json"
+    console.log("finding content for: ", type, onetype)
     let max_headlines = 5
-    let current_headlines
+    let current_headlines = 0
     try {
     const response = await fetch(indexurl);
     if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
     }
     const result = await response.json();
-    let entries = result.length;
+    
+    //let entries = result.length;
     let highest_entry = -1
     let best 
     
@@ -78,15 +89,20 @@ async function find_content(type,onetype) { //Sets up the content page
     Object.values(result).forEach (value => {
       Object.values(result).forEach (value => {
         if (value.fetured > highest_entry && !value.applyed){
+          console.log("setting",value)
           highest_entry = value.fetured
           best = value
+          
         }
       })
-      if (!best.applyed && current_headlines <= max_headlines ) {
+
+      if (!best.applyed && current_headlines <= max_headlines) {
                 best.applyed = true
                 current_headlines =+ 1
-                apply_content(best,type,onetype)
+                apply_content(best,type,onetype)  
+                console.log('applyed content: ', best)
             }
+      highest_entry = -1
     })
     
     Object.values(result).forEach (value => {
@@ -98,6 +114,7 @@ async function find_content(type,onetype) { //Sets up the content page
 }
 
 async function apply_content(best,type,onetype) {
+  console.log("running apply content ")
     try {
         const response = await fetch("/headlines/" + best.internalname + ".md");
         if (!response.ok) {
@@ -106,9 +123,11 @@ async function apply_content(best,type,onetype) {
         const result = await response.text();
         console.log(result);
         if (onetype == true){
+          console.log("pasting in content as id type content ")
           document.getElementById("content").innerHTML = document.getElementById("content").innerHTML + result
         } else {
           document.getElementById(type).innerHTML = document.getElementById(type).innerHTML + result
+          console.log('pasted headline')
         }
         
     } catch (error) {
