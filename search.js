@@ -3,8 +3,8 @@ async function search() { //Sets up the content page
     console.log(querry)
     const tempstring = '<a href="page?p='
     const tempstring2 = '">'
-    const indexurl = "contentindexguides.json"
-    const indexurl2 = "contentindexblogs.json"
+    const indexurl = "indexs/contentindexguides.json" //list of all guides
+    const indexurl2 = "indexs/contentindexblogs.json" // list of all blogs set to feture the top 
 
     try {
         const response = await fetch(indexurl);
@@ -18,7 +18,7 @@ async function search() { //Sets up the content page
         console.log(value)
         if (value.displayname.includes(querry)) {
             console.log("Found Match: ", value.displayname)
-            document.getElementById("pagecontent").innerHTML += tempstring + value.internalname + tempstring2 + value.displayname + "<br>" +"</a>"
+            document.getElementById("searchresult").innerHTML += tempstring + value.internalname + tempstring2 + value.displayname + "<br>" +"</a>"
         } else {
             console.log("Cannot find a match")
         }
@@ -29,6 +29,13 @@ async function search() { //Sets up the content page
         console.log("there was a error in search")
     }
 
+    const response = await fetch("/headlines/" + best.internalname + ".md");
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        const result = await response.text();
+        console.log(result); 
+        
     //second one for blogs, will change so they work with both maybe
     //maybe use a loop instead of dupeing code 
 
@@ -46,7 +53,7 @@ async function search() { //Sets up the content page
         console.log(value)
         if (value.displayname.includes(querry)) {
             console.log("Found Match: ", value.displayname)
-            document.getElementById("pagecontent").innerHTML += tempstring + value.internalname + tempstring2 + value.displayname + "<br>" + "</a>"
+            document.getElementById("searchresult").innerHTML += tempstring + value.internalname + tempstring2 + value.displayname + "<br>" + "</a>"
         } else {
             console.log("Cannot find a match")
         }

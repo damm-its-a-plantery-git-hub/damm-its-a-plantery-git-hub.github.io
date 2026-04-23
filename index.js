@@ -85,7 +85,7 @@ window.addEventListener("scroll", () => {
 
 
 async function find_content(type,onetype) { //Sets up the content page
-    const indexurl = "contentindex" + type + ".json"
+    const indexurl = "indexs/contentindex" + type + ".json"
     console.log("finding content for: ", type, onetype)
     let max_headlines = 10
     let current_headlines = 0

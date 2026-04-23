@@ -2,6 +2,10 @@ h1 {
     font-family: "Google Sans", 'Times New Roman', Times, serif;
     color: rgb(99, 109, 99);
 }
+h2{
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    color: rgb(99, 109, 99); 
+}
 
 #googlefont{
   font-family: "Google Sans", 'Times New Roman', Times, serif;
@@ -15,24 +19,21 @@ body{
     background-color: hsl(180, 15%, 90%);
 
 }
-#PageContent{
+#pagecontent{
     position: static; 
-    width: 80%;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-top: 1%;
+    width: 70%;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-top: 3%;
     background-color: aqua;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    text-align: center;
+   
 }
-#blogs{
+#pagecontent #searchresult{
     background-color: blueviolet;
     padding: 5px;
     margin: 5px;
+
     
-}
-#guides{
-    background-color: coral;
-    padding: 5px;
-    margin: 5px;
 }
