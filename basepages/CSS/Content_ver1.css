@@ -1,7 +1,13 @@
 .ContentVER1{
+    /*display: grid;
+    grid-template-columns: 1fr 1fr;*/
+    background-color: aqua;
+    padding: 0.5%;
+    
+}
+.content{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: aqua;
     padding: 0.5%;
 }
 .ContentVER1 img{
@@ -9,7 +15,7 @@
     background-color: aliceblue;
     border: 1px black;
     padding: 4px;
-    text-align: center;
+    text-align: center; 
     width: 95%;
     height: 95%;
     aspect-ratio: 16 9;
@@ -27,4 +33,7 @@
     border: 1px black;
     padding: 5px;
     text-align: center;
+}
+.ContentVER1 a{
+    text-decoration: none !important;
 }

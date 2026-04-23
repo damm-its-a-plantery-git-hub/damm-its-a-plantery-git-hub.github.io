@@ -1,0 +1,38 @@
+{
+    "content1" : {
+        "fetured" : 10,
+        "internalname" : "001",
+        "displayname" : "headline",
+        "applyed": false
+    },
+    "content2" : {
+        "fetured" : 9,
+        "internalname" : "002",
+        "displayname" : "the best headline",
+        "applyed": false
+    },
+    "content3" : {
+        "fetured" : 8,
+        "internalname" : "003",
+        "displayname" : "headline",
+        "applyed": false
+    },
+    "content4" : {
+        "fetured" : 7,
+        "internalname" : "004",
+        "displayname" : "the best headline",
+        "applyed": false
+    },
+    "content5" : {
+        "fetured" : 6,
+        "internalname" : "005",
+        "displayname" : "headline",
+        "applyed": false
+    },
+    "content6" : {
+        "fetured" : 5,
+        "internalname" : "006",
+        "displayname" : "the best headline",
+        "applyed": false
+    }
+}

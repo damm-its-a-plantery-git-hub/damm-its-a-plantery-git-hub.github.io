@@ -1,14 +1,29 @@
 let lastScrollY = window.scrollY;
 
-async function SetUpPage(headlines,type = false) { //applys the footer and navbar
-  if (headlines == true ){
-    find_content("blogs",type)
-    if (type == false){
-      find_content("guides",type)
-    }
+async function SetUpPage(type,onetype) { //applys the footer and navbar
+  if(onetype == false) {
     
-  } 
-
+    if (type == "blogs" ){
+      find_content("blogs",false)
+    
+    } else if(type == "guides" ){
+        find_content("guides",false)
+    
+    } else if(type == "all"){
+      find_content("guides",false)
+      find_content("blogs",false)
+    }
+  } else if (onetype == true) {
+      
+    if (type == "blogs" ){
+        find_content("blogs",true)
+        find_content("blogs2",'true2')
+      
+      } else if(type == "guides" ){
+          find_content("guides",true)
+          find_content("guides2",'true2')
+      }
+    }
   const url = "basepages/navbar.md"
   const footer ="basepages/footer.md"
   try {
@@ -72,14 +87,14 @@ window.addEventListener("scroll", () => {
 async function find_content(type,onetype) { //Sets up the content page
     const indexurl = "contentindex" + type + ".json"
     console.log("finding content for: ", type, onetype)
-    let max_headlines = 5
+    let max_headlines = 10
     let current_headlines = 0
     try {
     const response = await fetch(indexurl);
     if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
     }
-    const result = await response.json();
+    let result = await response.json();
     
     //let entries = result.length;
     let highest_entry = -1
@@ -125,6 +140,8 @@ async function apply_content(best,type,onetype) {
         if (onetype == true){
           console.log("pasting in content as id type content ")
           document.getElementById("content").innerHTML = document.getElementById("content").innerHTML + result
+        } if (onetype == 'true2') {
+          document.getElementById("content2").innerHTML = document.getElementById("content2").innerHTML + result
         } else {
           document.getElementById(type).innerHTML = document.getElementById(type).innerHTML + result
           console.log('pasted headline')
