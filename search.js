@@ -18,7 +18,8 @@ async function search() { //Sets up the content page
         console.log(value)
         if (value.displayname.includes(querry)) {
             console.log("Found Match: ", value.displayname)
-            document.getElementById("searchresult").innerHTML += tempstring + value.internalname + tempstring2 + value.displayname + "<br>" +"</a>"
+            apply_content(value)  
+            //document.getElementById("searchresult").innerHTML += tempstring + value.internalname + tempstring2 + value.displayname + "<br>" +"</a>"
         } else {
             console.log("Cannot find a match")
         }
@@ -36,11 +37,9 @@ async function search() { //Sets up the content page
         const result = await response.text();
         console.log(result); 
         
-    //second one for blogs, will change so they work with both maybe
+    //second one for blogs, might change so they work with both maybe
     //maybe use a loop instead of dupeing code 
-
-
-
+    
     try {
         const response = await fetch(indexurl2);
         if (!response.ok) {
@@ -53,7 +52,7 @@ async function search() { //Sets up the content page
         console.log(value)
         if (value.displayname.includes(querry)) {
             console.log("Found Match: ", value.displayname)
-            document.getElementById("searchresult").innerHTML += tempstring + value.internalname + tempstring2 + value.displayname + "<br>" + "</a>"
+            apply_content(value)
         } else {
             console.log("Cannot find a match")
         }
@@ -63,8 +62,27 @@ async function search() { //Sets up the content page
         console.error(error.message)
         console.log("there was a error in search")
     }
-
 }
 window.addEventListener("DOMContentLoaded", () => {
     search()
 });
+
+
+
+async function apply_content(value) {
+  console.log("running apply content ")
+    try {
+        const response = await fetch("/headlines/" + value.internalname + ".md");
+        if (!response.ok) {
+            throw new Error(`Response status: ${response.status}`);
+        }
+        const result = await response.text();
+        console.log(result);
+        document.getElementById("searchresult").innerHTML = document.getElementById("searchresult").innerHTML + result        
+    } catch (error) {
+        console.error(error.message);
+    }
+    //Uses try so it thorws errors properly 
+}
+
+
