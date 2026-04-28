@@ -71,7 +71,10 @@ async function setup_page() { //Sets up the content page
 
 window.addEventListener("scroll", () => {
   let nav = document.getElementById("navbar")
-  if (lastScrollY < window.scrollY ) {
+  //this is a version 2 thing
+  //console.log("the window pos is: ",window.scrollY,"nav size is: ",nav.height)
+  //&& window.scrollY > nav.height
+  if (lastScrollY < window.scrollY) {
     // Scrolling Down - hide the navbar
     nav.classList.add('navbar--hidden');
   } else {
