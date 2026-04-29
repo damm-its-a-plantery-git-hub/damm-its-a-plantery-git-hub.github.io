@@ -34,5 +34,11 @@
         "internalname" : "006",
         "displayname" : "the best headline",
         "applyed": false
+    },
+    "content7" : {
+        "fetured" : 5,
+        "internalname" : "006",
+        "displayname" : "the best headline",
+        "applyed": false
     }
 }
