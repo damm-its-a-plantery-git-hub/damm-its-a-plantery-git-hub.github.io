@@ -1,15 +1,16 @@
 h1 {
     font-family: "Google Sans", 'Times New Roman', Times, serif;
     color: rgb(99, 109, 99);
-}
+    text-align: justify;
 
-#googlefont{
-  font-family: "Google Sans", 'Times New Roman', Times, serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings:
-    "GRAD" 25;
+}
+p{
+    text-align: justify;
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings: "GRAD" 25;
 }
 body{
     background-color: hsl(180, 15%, 90%);
@@ -27,27 +28,33 @@ body{
 #imagedivider{
     grid-template-columns: 1fr 1fr;
     display: grid;
+    padding-top: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+    text-align: justify;
 }
-/*#top_image{
-    width: 160%;
-    margin-left: -30%;
-    /*aspect-ratio: 1 / 0.3;
+#top_image{
+    width: 100%;
+    margin-left: 0%;
+    aspect-ratio: 1 / 0.3;
     overflow: hidden;
     max-height: 30%;
     
-}*/
-/*
-Source - https://stackoverflow.com/a/44860046
-Posted by Asons, modified by community. See post 'Timeline' for change history
-Retrieved 2026-04-29, License - CC BY-SA 4.0
-*/
+}
+#content_image{
+    width: 100%;
+    margin-right: -5%;
+    margin-left: -5%;
 
-.wrapper {
+}
+
+
+/*.wrapper {
     display: inline-block;
     background: lightgray;
     overflow: hidden;
     margin-left: -25%;
-    width: 150%;
+    width: 100;
     height: 30%;
     align-items: center;
 }
@@ -55,4 +62,4 @@ Retrieved 2026-04-29, License - CC BY-SA 4.0
 .wrapper img {
     object-fit: contain;
     overflow: hidden;
-}
+}*/
