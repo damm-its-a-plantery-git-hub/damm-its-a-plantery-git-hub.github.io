@@ -15,13 +15,15 @@ async function SetUpPage(type,onetype) { //applys the footer and navbar
     }
   } else if (onetype == true) {
       
-    if (type == "blogs" ){
+    if (type == "blogs"){
         find_content("blogs",true)
         find_content("blogs2",'true2')
+        find_content("blogs2",'extra',true)
       
       } else if(type == "guides" ){
           find_content("guides",true)
           find_content("guides2",'true2')
+          find_content("guides2",'extra',true)
       }
     }
   const url = "basepages/navbar.md"
@@ -91,11 +93,15 @@ window.addEventListener("scroll", () => {
 
 
 
-async function find_content(type,onetype) { //Sets up the content page
+async function find_content(type,onetype,modifyed = false) { //Sets up the content page
     const indexurl = "indexs/contentindex" + type + ".json"
     console.log("finding content for: ", type, onetype)
-    let max_headlines = 10
-    let current_headlines = 0
+    let max_headlines = 5
+    let current_headlines = 1
+    if (modifyed == true) {
+      max_headlines = 50
+    }
+    
     try {
     const response = await fetch(indexurl);
     if (!response.ok) {
@@ -114,21 +120,17 @@ async function find_content(type,onetype) { //Sets up the content page
           console.log("setting",value)
           highest_entry = value.fetured
           best = value
-          
         }
       })
 
       if (!best.applyed && current_headlines <= max_headlines) {
                 best.applyed = true
-                current_headlines =+ 1
-                apply_content(best,type,onetype)  
-                console.log('applyed content: ', best)
+                current_headlines = current_headlines + 1
+                apply_content(best,type,onetype)
+                console.log(current_headlines,max_headlines)
             }
       highest_entry = -1
-    })
-    
-    Object.values(result).forEach (value => {
-            
+
     })
     } catch (error) {
         console.error(error.message)
@@ -136,22 +138,22 @@ async function find_content(type,onetype) { //Sets up the content page
 }
 
 async function apply_content(best,type,onetype) {
-  console.log("running apply content ")
     try {
         const response = await fetch("/headlines/" + best.internalname + ".md");
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
+
+        console.log(document.getElementById(type),"type is : ",type )
         const result = await response.text();
-        console.log(result);
         if (onetype == true){
-          console.log("pasting in content as id type content ")
           document.getElementById("content").innerHTML = document.getElementById("content").innerHTML + result
-        } if (onetype == 'true2') {
+        } else if (onetype == 'true2') {
           document.getElementById("content2").innerHTML = document.getElementById("content2").innerHTML + result
+        } else if (onetype == "extra"){
+          document.getElementById("extra").innerHTML = document.getElementById("extra").innerHTML + result
         } else {
           document.getElementById(type).innerHTML = document.getElementById(type).innerHTML + result
-          console.log('pasted headline')
         }
         
     } catch (error) {

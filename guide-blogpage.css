@@ -1,15 +1,18 @@
 h1 {
     font-family: "Google Sans", 'Times New Roman', Times, serif;
-    color: rgb(99, 109, 99);
+    color: rgb(78,78,78);
 }
-
-#googlefont{
-  font-family: "Google Sans", 'Times New Roman', Times, serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-  font-variation-settings:
-    "GRAD" 25;
+h2{
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    color: rgb(78, 78, 78); 
+}
+p{
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+        "GRAD" 25;
 }
 body{
     background-color: hsl(180, 15%, 90%);
@@ -21,8 +24,14 @@ body{
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 1%;
-    background-color: aqua;
+    /*background-color: aqua;*/
     
+}
+#extra{
+    background-color: antiquewhite;
+    height: 10%;
+    grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
 }
 #columns{
     grid-template-columns: 1fr 1fr;
@@ -30,12 +39,12 @@ body{
 }
 
 #content{
-    background-color: coral;
+    background-color: rgb(255, 214, 199);
     padding: 5px;
     margin: 5px;
 }
 #content2{
-    background-color: coral;
+    background-color: rgb(255, 214, 199);
     padding: 5px;
     margin: 5px;
 }
