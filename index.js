@@ -36,6 +36,10 @@ async function SetUpPage(type,onetype) { //applys the footer and navbar
   } catch (error) {
     console.error(error.message);
   }
+  if (window.location.href.split("?searchbar=")[1]){
+    document.getElementById("searchbar").value = decodeURIComponent(window.location.href.split("?searchbar=")[1]).replaceAll("+"," ")
+  }
+  
   //Uses try so it thorws errors properly 
   try {
     const response = await fetch(footer); //checks footer to see if it works

@@ -2,16 +2,10 @@
     background-color: #faebd7;
     width: 98%;
     height: auto;
-    /*border-left-width: 1%;
-    border-right-width: 1%;*/
     padding-right: 1%;
     padding-left: 1%;
     position: sticky;
     visibility: visible;
-    /*margin-left: auto;
-    margin-right: auto;
-    margin-top: auto;
-    margin-bottom: auto;*/
     color: black;
     display: flex;
     justify-content: space-between;
@@ -38,9 +32,10 @@
     font-size: larger;
     height: 100px;
     align-content: center;
+    font-size: x-large;
 }
 
-#navbar a:hover {
+#navbar a:hover {  
     background-color: #f5d7af;
 }
 
@@ -50,4 +45,19 @@
     font-size: large;
     color: rgb(99, 109, 99);
     background-color: #faebd7;
+}
+#mainlink{
+    justify-content: space-evenly;
+    flex-flow: row nowrap;
+    display: flex;
+    width: 35%;
+    margin-right: -2.5%;
+}
+#mainlink form{
+    justify-content: space-evenly;
+    flex-flow: nowrap;
+    display:flex;
+    width: 40%;
+    align-items: center;
+
 }
