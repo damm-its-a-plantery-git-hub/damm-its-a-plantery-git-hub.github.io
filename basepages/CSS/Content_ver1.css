@@ -12,26 +12,34 @@
     content: blank;
     background-color: aliceblue;
     border: 1px black;
-    padding: 4px;
+    padding: 3px;
     text-align: center; 
     width: 95%;
-    height: 95%;
-    aspect-ratio: 16 9;
+    height: auto;
+    aspect-ratio: 16/9;
 }
 .ContentVER1 h1{
     content: blank;
     background-color: aliceblue;
     border: 1px black;
-    padding: 5px;
+    padding: 2px;
     text-align: center;
 }
 .ContentVER1 p{
     content: blank;
     background-color: aliceblue;
     border: 1px black;
-    padding: 5px;
+    padding: 2px;
     text-align: center;
 }
 .ContentVER1 a{
     text-decoration: none !important;
+    color: black;
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+    "GRAD" 25;
 }
+

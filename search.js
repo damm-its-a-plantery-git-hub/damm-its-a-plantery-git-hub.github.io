@@ -1,5 +1,5 @@
 async function search() { //Sets up the content page
-    const querry = decodeURIComponent(window.location.href.split("?searchbar=")[1]).replaceAll("+"," ")
+    const querry = decodeURIComponent(window.location.href.split("?searchbar=")[1]).replaceAll("+"," ").toLowerCase()
     console.log(querry)
     const tempstring = '<a href="page?p='
     const tempstring2 = '">'
@@ -26,7 +26,6 @@ async function search() { //Sets up the content page
     })
     } catch (error) {
         console.error(error.message)
-        console.log("there was a error in search")
     }
     
     //second one for blogs, might change so they work with both maybe
@@ -51,7 +50,6 @@ async function search() { //Sets up the content page
     })
     } catch (error) {
         console.error(error.message)
-        console.log("there was a error in search")
     }
 }
 window.addEventListener("DOMContentLoaded", () => { search() });

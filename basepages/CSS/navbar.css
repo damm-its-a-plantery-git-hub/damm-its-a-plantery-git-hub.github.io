@@ -59,5 +59,7 @@
     display:flex;
     width: 40%;
     align-items: center;
-
+}
+#title{
+    color: rgb(67, 75, 67);;
 }

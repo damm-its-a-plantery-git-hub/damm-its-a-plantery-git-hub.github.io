@@ -128,8 +128,10 @@ async function find_content(type,onetype,modifyed = false) { //Sets up the conte
                 current_headlines = current_headlines + 1
                 apply_content(best,type,onetype)
                 console.log(current_headlines,max_headlines)
+                best = "none"
             }
       highest_entry = -1
+      
 
     })
     } catch (error) {
