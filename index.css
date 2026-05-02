@@ -21,18 +21,17 @@ body{
     padding-left: 10%;
     padding-right: 10%;
     padding-top: 1%;
-    background-color: aqua;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 #blogs{
-    background-color: blueviolet;
+    background-color: rgb(220, 182, 255);
     padding: 5px;
     margin: 5px;
     
 }
 #guides{
-    background-color: coral;
+    background-color:  rgb(255, 214, 199);
     padding: 5px;
     margin: 5px;
 }
