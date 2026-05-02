@@ -28,8 +28,7 @@ async function search() { //Sets up the content page
         console.error(error.message)
         console.log("there was a error in search")
     }
-
-        
+    
     //second one for blogs, might change so they work with both maybe
     //maybe use a loop instead of dupeing code 
     
@@ -54,13 +53,8 @@ async function search() { //Sets up the content page
         console.error(error.message)
         console.log("there was a error in search")
     }
-    
 }
-window.addEventListener("DOMContentLoaded", () => {
-    search()
-});
-
-
+window.addEventListener("DOMContentLoaded", () => { search() });
 
 async function apply_content(value) {
   console.log("running apply content ")
