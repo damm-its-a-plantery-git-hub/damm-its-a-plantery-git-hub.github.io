@@ -1,9 +1,12 @@
 h1 {
     font-family: "Google Sans", 'Times New Roman', Times, serif;
-    color: rgb(99, 109, 99);
+    color: rgb(86, 95, 86);
 }
-
-#googlefont{
+h2 {
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    color: rgb(26, 29, 26);
+}
+p{
   font-family: "Google Sans", 'Times New Roman', Times, serif;
   font-optical-sizing: auto;
   font-weight: 100;

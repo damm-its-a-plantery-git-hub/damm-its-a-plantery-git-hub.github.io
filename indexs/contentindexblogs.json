@@ -1,43 +1,43 @@
 {
     "content1" : {
         "fetured" : 10,
-        "internalname" : "001",
-        "displayname" : "headline",
+        "internalname" : "001B",
+        "displayname" : "stop buying tech that’s built to break",
         "applyed": false
     },
     "content2" : {
         "fetured" : 9,
-        "internalname" : "002",
-        "displayname" : "the best headline",
+        "internalname" : "002B",
+        "displayname" : "i deleted 50 apps and reclaimed my focus",
         "applyed": false
     },
     "content3" : {
         "fetured" : 8,
-        "internalname" : "003",
-        "displayname" : "headline",
+        "internalname" : "003B",
+        "displayname" : "keeping the human touch in an ai world",
         "applyed": false
     },
     "content4" : {
         "fetured" : 7,
-        "internalname" : "004",
+        "internalname" : "004B",
         "displayname" : "the best headline",
         "applyed": false
     },
     "content5" : {
         "fetured" : 6,
-        "internalname" : "005",
+        "internalname" : "005B",
         "displayname" : "headline",
         "applyed": false
     },
     "content6" : {
         "fetured" : 5,
-        "internalname" : "006",
+        "internalname" : "006B",
         "displayname" : "the best headline",
         "applyed": false
     },
     "content7" : {
         "fetured" : 5,
-        "internalname" : "006",
+        "internalname" : "006B",
         "displayname" : "the best headline",
         "applyed": false
     }
