@@ -2,8 +2,11 @@
     background-color: rgb(196, 241, 241);
     padding: 1%;
     width: 98%;
-    /*height: 18%;*/
+    height: 18%;
     align-items: center; 
+    border-radius: 15px;
+    aspect-ratio: 4/1;
+    margin: 0.5%;
 }
 .content{
     display: grid;
@@ -14,10 +17,11 @@
     background-color: aliceblue;
     border: 1px black;
     padding: 2px;
-    text-align: center; 
+    align-self: center;
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
+    border-radius: 5px;
 }
 .ContentVER1 h1{
     content: blank;
