@@ -131,9 +131,9 @@ async function find_content(type,onetype,modifyed = false) { //Sets up the conte
                 best = "none"
             }
       highest_entry = -1
-      
 
     })
+
     } catch (error) {
         console.error(error.message)
     }  
@@ -141,7 +141,11 @@ async function find_content(type,onetype,modifyed = false) { //Sets up the conte
 
 async function apply_content(best,type,onetype) {
     try {
-        const response = await fetch("/headlines/" + best.internalname + ".md");
+        let response = await fetch("/headlines/" + best.internalname + ".md");
+        if (onetype == "extra"){
+          response = await fetch("/headline-small/" + best.internalname + ".md");
+          console.log("type was extra")
+        }
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
