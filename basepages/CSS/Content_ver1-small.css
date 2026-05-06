@@ -2,8 +2,11 @@
     background-color: rgb(196, 241, 241);
     padding: 1%;
     width: 98%;
-    /*height: 18%;*/
     align-items: center; 
+    border-radius: 15px;
+    margin: 0.5%;
+    padding-top: -10%;
+    padding-bottom: 1%;
 }
 .content{
     display: grid;
@@ -14,10 +17,11 @@
     background-color: aliceblue;
     border: 1px black;
     padding: 2px;
-    text-align: center; 
     width: 100%;
     height: auto;
     aspect-ratio: 16/9;
+    border-radius: 10px;
+    margin-top: 1%;
 }
 .ContentVER2 h1{
     content: blank;
@@ -25,13 +29,17 @@
     text-align: center;
     margin-top: 1%;
     margin-left: 3%;
+    border-radius: 10px;
 }
 .ContentVER2 p{
-    margin-left: 3%;
-    margin-top: -0.5%;
     content: blank;
     background-color: aliceblue;
     text-align: center;
+    margin-left: 3%;
+    margin-top: -3.5%;
+    margin-bottom: 0.5%;
+    padding-top: 1%;
+    border-radius: 10px;
 }
 .ContentVER2 a{
     text-decoration: none !important;

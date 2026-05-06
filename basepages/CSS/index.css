@@ -47,4 +47,9 @@ body{
     margin: 1%;
     margin-bottom: 2.5%;
 }
-
+@media (max-width: 768px) {
+    #pagecontent{
+        grid-template-columns: 1fr;
+        padding: -100%;
+    }
+}

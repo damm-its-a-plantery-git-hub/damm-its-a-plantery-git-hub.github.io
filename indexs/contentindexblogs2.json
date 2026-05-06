@@ -24,7 +24,7 @@
         "applyed": false
     },
     "content5" : {
-        "fetured" : 5,
+        "fetured" : 9,
         "internalname" : "005B",
         "displayname" : "headline",
         "applyed": false
@@ -36,7 +36,7 @@
         "applyed": false
     },
     "content7" : {
-        "fetured" : 9,
+        "fetured" : 5,
         "internalname" : "006B",
         "displayname" : "the best headline",
         "applyed": false

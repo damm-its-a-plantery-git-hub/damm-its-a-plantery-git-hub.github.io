@@ -31,8 +31,10 @@ body{
 }
 #pagecontent #searchresult{
     background-color: rgb(220, 182, 255);
-    padding: 5px;
+    padding: 1%;
+    padding-right: 2%;
     margin: 5px;
     width: auto;
+    border-radius: 15px;
     
 }

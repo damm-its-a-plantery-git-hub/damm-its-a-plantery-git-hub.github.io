@@ -96,43 +96,28 @@ window.addEventListener("scroll", () => {
 async function find_content(type,onetype,modifyed = false) { //Sets up the content page
     const indexurl = "indexs/contentindex" + type + ".json"
     console.log("finding content for: ", type, onetype)
-    let max_headlines = 5
+    let max_headlines = modifyed ? 50 : 5;
     let current_headlines = 1
-    if (modifyed == true) {
-      max_headlines = 50
-    }
     
     try {
     const response = await fetch(indexurl);
     if (!response.ok) {
         throw new Error(`Response status: ${response.status}`);
     }
+    
     let result = await response.json();
-    
-    //let entries = result.length;
-    let highest_entry = -1
-    let best 
-    
-    
-    Object.values(result).forEach (value => {
-      Object.values(result).forEach (value => {
-        if (value.fetured > highest_entry && !value.applyed){
-          console.log("setting",value)
-          highest_entry = value.fetured
-          best = value
-        }
-      })
 
-      if (!best.applyed && current_headlines <= max_headlines) {
-                best.applyed = true
-                current_headlines = current_headlines + 1
-                apply_content(best,type,onetype)
-                console.log(current_headlines,max_headlines)
-                best = "none"
-            }
-      highest_entry = -1
-
-    })
+    let sortedItems = Object.values(result).sort((a, b) => b.fetured - a.fetured);
+    
+    console.log(sortedItems)
+    let itemsToApply = sortedItems
+      .filter(item => !item.applyed)
+      .slice(0, max_headlines);
+    
+    for (const i of itemsToApply) {
+      i.applyed = true;
+      await apply_content(i,type,onetype)
+    }
 
     } catch (error) {
         console.error(error.message)
