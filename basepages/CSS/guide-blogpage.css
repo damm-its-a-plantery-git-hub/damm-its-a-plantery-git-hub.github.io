@@ -18,7 +18,7 @@ body{
     background-color: hsl(180, 15%, 90%);
 
 }
-#PageContent{
+#pagecontent{
     position: static; 
     width: 80%;
     padding-left: 10%;
@@ -59,3 +59,71 @@ body{
     margin: 1%;
     margin-bottom: 2.5%;
 }
+.ContentVER2{
+    background-color: rgb(196, 241, 241);
+    padding: 1%;
+    width: 98%;
+    align-items: center; 
+    border-radius: 15px;
+    margin: 0.5%;
+    padding-top: -10%;
+    padding-bottom: 1%;
+}
+
+.ContentVER2 img{
+    content: blank;
+    background-color: aliceblue;
+    border: 1px black;
+    padding: 2px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9;
+    border-radius: 10px;
+    margin-top: 1%;
+}
+.ContentVER2 h1{
+    content: blank;
+    background-color: aliceblue;
+    text-align: center;
+    margin-top: 1%;
+    margin-left: 3%;
+    border-radius: 10px;
+}
+.ContentVER2 p{
+    content: blank;
+    background-color: aliceblue;
+    text-align: center;
+    margin-left: 3%;
+    margin-top: -3.5%;
+    margin-bottom: 0.5%;
+    padding-top: 1%;
+    border-radius: 10px;
+}
+.ContentVER2 a{
+    text-decoration: none;
+    color: black;
+    font-family: "Google Sans", 'Times New Roman', Times, serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    font-variation-settings:
+    "GRAD" 25;
+    font-size: small;
+}
+
+
+@media screen and (max-width: 768px) {
+    #columns{
+        grid-template-columns: 1fr;
+    }
+    #extra{
+        grid-template-columns: 1fr 1fr;
+    }
+    .ContentVER1 {
+        font-size: small;
+    }
+    .ContentVER2 a{
+        font-size: xx-small; 
+    }
+}
+

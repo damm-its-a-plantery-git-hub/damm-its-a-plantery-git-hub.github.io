@@ -18,7 +18,7 @@ body{
     background-color: hsl(180, 15%, 90%);
 
 }
-#PageContent{
+#pagecontent{
     position: static; 
     width: 80%;
     padding-left: 10%;
@@ -26,6 +26,7 @@ body{
     padding-top: 1%;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    background-color: aquamarine;
 }
 #blogs{
     border-radius: 15px;
@@ -47,9 +48,14 @@ body{
     margin: 1%;
     margin-bottom: 2.5%;
 }
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     #pagecontent{
-        grid-template-columns: 1fr;
-        padding: -100%;
+    grid-template-columns: 1fr;
+    background-color: red;
+    }
+}
+@media screen  and (max-width: 768px) {
+    .ContentVER1 {
+        font-size: small;
     }
 }
