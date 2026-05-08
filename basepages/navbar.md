@@ -2,8 +2,8 @@
 <div class="dropdown">
   <button class="dropbtn"><a href="index.html"><h1 id="logo">Andy's emporium</h1></a></button>
   <div class="dropdown-content">
-    <a href="#">Guide</a>
-    <a href="#">Blog</a>
+    <a href="#">Guides</a>
+    <a href="#">Blogs</a>
     <a>
     <form action="search.html" method="get">
         <input name="searchbar" type="text" id="searchbar" placeholder="Search">

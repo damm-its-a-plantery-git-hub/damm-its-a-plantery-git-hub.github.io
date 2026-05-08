@@ -37,6 +37,7 @@
   
 
 #logo {
+    text-decoration: none;
     display: flex;
     font-family: "Google Sans", 'Times New Roman', Times, serif;
     font-weight: bold;
@@ -47,14 +48,14 @@
     text-align: justify;
     align-content: center;
     font-size: xx-large;
-    margin-left: 5%;
+    margin-left: 6%;
 
 }
 #mainlink{
     justify-content: space-evenly;
     flex-flow: row nowrap;
     display: flex;
-    width: 45%;
+    width: 40%;
     margin-right: -2.5%;
 }
 #mainlink form{
