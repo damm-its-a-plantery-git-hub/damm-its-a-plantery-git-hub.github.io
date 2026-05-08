@@ -21,9 +21,8 @@
     transform: translateY(-120%);
 }
 
-#navbar a{
-    display: block;
-    color: blue;
+#navbar #mainlink a {
+    display: inline-block;
     text-align: center;
     padding: 1% 2%;
     text-decoration: none;
@@ -35,22 +34,27 @@
     font-size: x-large;
 }
 
-#navbar a:hover {  
-    background-color: #f5d7af;
-}
+  
 
-#navbar #logo{
+#logo {
+    display: flex;
     font-family: "Google Sans", 'Times New Roman', Times, serif;
     font-weight: bold;
-    font-size: large;
     color: rgb(99, 109, 99);
     background-color: #faebd7;
+    width: 110% !important;
+    flex-flow: nowrap;
+    text-align: justify;
+    align-content: center;
+    font-size: xx-large;
+    margin-left: 5%;
+
 }
 #mainlink{
     justify-content: space-evenly;
     flex-flow: row nowrap;
     display: flex;
-    width: 35%;
+    width: 45%;
     margin-right: -2.5%;
 }
 #mainlink form{
@@ -60,6 +64,57 @@
     width: 40%;
     align-items: center;
 }
-#title{
-    color: rgb(67, 75, 67);;
+.dropdown{
+    color: rgb(67, 75, 67);
+    height: auto;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100%;
+}
+.dropbtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.dropbtn:hover{
+    background-color: #faebd7;
+}
+
+@media screen and (max-width: 1280px) {
+    .dropdown {
+    position: relative;
+    }
+
+    /* Links inside dropdown content */
+    .dropdown .dropdown-content a {
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    color: black;
+    text-decoration: none;
+    display: block;
+    min-width: 10%;
+    text-align:start;
+    align-items: center;
+    }
+
+    /* Change color of dropdown links on hover */
+    .dropdown-content a:hover {
+    background-color: #f1f1f1
+    }
+
+    /* Show the dropdown content on hover */
+    .dropdown:hover .dropdown-content {
+    display: block;
+    }
+
+    /* Change background color of dropdown button on hover */
+    .dropdown:hover .dropbtn {
+    background-color: transparent;
+    }
+    #mainlink{display: none;}
 }
