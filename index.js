@@ -40,6 +40,7 @@ async function SetUpPage(type,onetype) { //applys the footer and navbar
   }
   if (window.location.href.split("?searchbar=")[1]){
     document.getElementById("searchbar").value = decodeURIComponent(window.location.href.split("?searchbar=")[1]).replaceAll("+"," ")
+    document.getElementById("searchbar2").value = decodeURIComponent(window.location.href.split("?searchbar=")[1]).replaceAll("+"," ")
   }
   
   //Uses try so it thorws errors properly 
@@ -58,16 +59,13 @@ async function SetUpPage(type,onetype) { //applys the footer and navbar
 async function setup_page() { //Sets up the content page
   SetUpPage(false)
   const url = "/pages/" + window.location.href.split("?p=")[1] + ".md";
-  console.log(window.location.href.split("?p=")[1] + ".md")
   try {
     const response = await fetch(url);
     if (!response.ok) {
       throw new Error(`Response status: ${response.status}`);
     }
   const result = await response.text();
-  console.log(result);
   document.getElementById("pagecontent").innerHTML = result
-  console.log(url)
   } catch (error) {
     console.error(error.message);
     document.getElementById("pagecontent").innerHTML = "<p>Cannot find page ", url, "</p>"
@@ -94,7 +92,6 @@ window.addEventListener("scroll", () => {
 
 async function find_content(type,onetype,modifyed = false) { //Sets up the content page
     const indexurl = "indexs/contentindex" + type + ".json"
-    console.log("finding content for: ", type, onetype)
     let max_headlines = modifyed ? 50 : 5;
     let current_headlines = 1
     
@@ -108,7 +105,7 @@ async function find_content(type,onetype,modifyed = false) { //Sets up the conte
 
     let sortedItems = Object.values(result).sort((a, b) => b.fetured - a.fetured);
     
-    console.log(sortedItems)
+    //console.log(sortedItems)
     let itemsToApply = sortedItems
       .filter(item => !item.applyed)
       .slice(0, max_headlines);
@@ -128,13 +125,11 @@ async function apply_content(best,type,onetype) {
         let response = await fetch("/headlines/" + best.internalname + ".md");
         if (onetype == "extra"){
           response = await fetch("/headline-small/" + best.internalname + ".md");
-          console.log("type was extra")
         }
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
 
-        console.log(document.getElementById(type),"type is : ",type )
         const result = await response.text();
         if (onetype == true){
           document.getElementById("content").innerHTML = document.getElementById("content").innerHTML + result

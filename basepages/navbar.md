@@ -16,7 +16,7 @@
     <a href="guide-page">Guides</a>
     <a href="blog-page">Blogs</a>
     <form action="search.html" method="get">
-        <input name="searchbar" type="text" id="searchbar" placeholder="Search">
+        <input name="searchbar" type="text" id="searchbar2" placeholder="Search">
     </form> 
 </div>
 

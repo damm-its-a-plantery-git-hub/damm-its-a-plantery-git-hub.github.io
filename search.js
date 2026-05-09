@@ -13,11 +13,8 @@ async function search() { //Sets up the content page
     }
 
     const result = await response.json();
-    console.log(result)
     Object.values(result).forEach (value => {
-        console.log(value)
         if (value.displayname.includes(querry)) {
-            console.log("Found Match: ", value.displayname)
             apply_content(value)  
         } else {
             console.log("Cannot find a match for guides")
@@ -38,11 +35,8 @@ async function search() { //Sets up the content page
     }
 
     const result = await response.json();
-    console.log(result)
     Object.values(result).forEach (value => {
-        console.log(value)
         if (value.displayname.includes(querry)) {
-            console.log("Found Match: ", value.displayname)
             apply_content(value)
         } else {
             console.log("Cannot find a match for blogs")
@@ -55,14 +49,12 @@ async function search() { //Sets up the content page
 window.addEventListener("DOMContentLoaded", () => { search() });
 
 async function apply_content(value) {
-  console.log("running apply content ")
     try {
         const response = await fetch("/headlines/" + value.internalname + ".md");
         if (!response.ok) {
             throw new Error(`Response status: ${response.status}`);
         }
         const result = await response.text();
-        console.log(result);
         document.getElementById("searchresult").innerHTML = document.getElementById("searchresult").innerHTML + result        
     } catch (error) {
         console.error(error.message);

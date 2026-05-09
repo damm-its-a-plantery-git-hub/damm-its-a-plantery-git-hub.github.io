@@ -8,6 +8,7 @@
     margin: 0.5%;
     padding-top: -10%;
     padding-bottom: 1%;
+    font-size: medium;
 }
 .content{
     display: grid;
@@ -52,4 +53,13 @@
     "GRAD" 25;
     font-size: medium ;
 }
-
+@media screen and (max-width:768px) {
+    .ContentVER1 a{
+        font-size: small !important;
+    }
+}
+@media screen and (max-width:500px) {
+    .ContentVER1 a{
+        font-size: x-small !important;
+    }
+}

@@ -114,9 +114,9 @@ body{
 
 
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width:1400px) {
     #extra{
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr ;
     }
     .ContentVER1 {
         font-size: small;
@@ -125,7 +125,18 @@ body{
         font-size: small; 
     }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width:1120px) {
+    #extra{
+        grid-template-columns: 1fr 1fr;
+    }
+    .ContentVER1 {
+        font-size: x-small;
+    }
+    .ContentVER2 a{
+        font-size: x-small; 
+    }
+}
+@media screen and (max-width: 856px) {
     #columns{
         grid-template-columns: 1fr;
     }
@@ -158,4 +169,14 @@ body{
     .ContentVER1 {
         font-size: x-large;
     }
+    .ContentVER2 a{
+        font-size: medium; 
+    }
+    #pagecontent{
+        width: 70%;
+        padding-left: 15%;
+        padding-right: 15%;
+    }
 }
+
+
