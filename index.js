@@ -55,7 +55,6 @@ async function SetUpPage(type,onetype) { //applys the footer and navbar
   }
 }
 
-
 async function setup_page() { //Sets up the content page
   SetUpPage(false)
   const url = "/pages/" + window.location.href.split("?p=")[1] + ".md";

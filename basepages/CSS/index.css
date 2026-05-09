@@ -81,7 +81,7 @@ body{
     background-color: rgb(113, 229, 255);
     }
     .ContentVER1 {
-        font-size: x-small;
+        font-size: x-small; 
     }
 }
 @media screen and (min-width: 2400px) { /*For screens bigger then 1080p not fully implimented TODO: Move to the content css files*/
