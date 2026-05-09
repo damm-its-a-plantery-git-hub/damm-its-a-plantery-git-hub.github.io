@@ -34,14 +34,12 @@
     font-size: x-large;
 }
 
-  
-
 #logo {
     text-decoration: none;
     display: flex;
     font-family: "Google Sans", 'Times New Roman', Times, serif;
     font-weight: bold;
-    color: rgb(99, 109, 99);
+    color: rgb(79, 79, 79);
     background-color: #faebd7;
     width: 110% !important;
     flex-flow: nowrap;

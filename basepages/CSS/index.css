@@ -1,11 +1,11 @@
 h1 {
     font-family: "Google Sans", 'Times New Roman', Times, serif;
-    color: rgb(86, 95, 86);
+    color: rgb(77, 77, 77);
 
 }
 h2 {
     font-family: "Google Sans", 'Times New Roman', Times, serif;
-    color: rgb(26, 29, 26);
+    color: rgb(29, 29, 29);
 }
 p{
   font-family: "Google Sans", 'Times New Roman', Times, serif;
@@ -35,7 +35,6 @@ body{
     padding-top: 1%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: aquamarine;
 }
 #blogs{
     border-radius: 15px;
@@ -58,12 +57,22 @@ body{
     margin-bottom: 2.5%;
 }
 
-@media screen and (max-width:1280px) {
+@media screen and (max-width:1400px) {
     .ContentVER1 {
         font-size: small;
     }
+    #pagecontent{
+        width: 90%;
+        padding-left: 5%;
+        padding-right: 5%;
+    }
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width:1060px) {
+    .ContentVER1 {
+        font-size: x-small;
+    }
+}
+@media screen and (max-width: 856px) {
     #pagecontent{
     grid-template-columns: 1fr;
     }
@@ -82,5 +91,10 @@ body{
 @media screen and (min-width: 2400px) { /*For screens bigger then 1080p not fully implimented TODO: Move to the content css files*/
     .ContentVER1 {
         font-size: x-large;
+    }
+    #pagecontent{
+        width: 70%;
+        padding-left: 15%;
+        padding-right: 15%;
     }
 }

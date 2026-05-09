@@ -112,6 +112,34 @@ body{
 }
 
 
+
+
+@media screen and (max-width:1280px) {
+    #extra{
+        grid-template-columns: 1fr 1fr;
+    }
+    .ContentVER1 {
+        font-size: small;
+    }
+    .ContentVER2 a{
+        font-size: small; 
+    }
+}
+@media screen and (max-width: 768px) {
+    #columns{
+        grid-template-columns: 1fr;
+    }
+    #extra{
+        grid-template-columns: 1fr 1fr;
+    }
+    .ContentVER1 {
+        font-size: small;
+    }
+    .ContentVER2 a{
+        font-size: x-small; 
+    }
+
+}
 @media screen and (max-width: 600px) {
     #columns{
         grid-template-columns: 1fr;
@@ -126,4 +154,8 @@ body{
         font-size: xx-small; 
     }
 }
-
+@media screen and (min-width: 2400px) { /*For screens bigger then 1080p not fully implimented TODO: Move to the content css files*/
+    .ContentVER1 {
+        font-size: x-large;
+    }
+}
