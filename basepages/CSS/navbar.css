@@ -123,4 +123,7 @@ a{
     background-color: transparent;
     }
     #mainlink{display: none;}
+    .linkheadline{
+        pointer-events: none;
+    }
 }

@@ -1,7 +1,8 @@
 <link rel="stylesheet" href="basepages/CSS/navbar.css">
 <div class="dropdown">
-  <button class="dropbtn"><a href="index.html"><h1 id="logo">Andy's emporium</h1></a></button>
+  <button class="dropbtn"><a href="index.html" class="linkheadline"><h1 id="logo">Andy's emporium</h1></a></button>
   <div class="dropdown-content">
+    <a href="index">Home</a>
     <a href="guide-page">Guides</a>
     <a href="blog-page">Blogs</a>
     <a>
